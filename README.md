@@ -9,7 +9,7 @@
 
 # Clone Repo
 ```
-git clone git@ec2-52-49-119-213.eu-west-1.compute.amazonaws.com:azaa1/application.git
+https://github.com/azaa1/python-application.git
 ```
 
 # Install Necessary Packages
