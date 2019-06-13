@@ -1,0 +1,8 @@
+epel-release
+mariadb-devel
+gcc
+python-pip
+python-devel
+libxslt-devel
+libffi-devel
+openssl-devel

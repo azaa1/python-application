@@ -1,22 +1,31 @@
-# Please follow the steps 
-## Run the application on Centos 7
+
+# Server Requirements
 ```
-git clone git@gitlab.acirrustech.com:deployment/applicaiton_deployment.git
-cd applicaiton_deployment
-yum -y install epel-release && yum clean all
-yum -y install python-pip && yum clean all
-yum install mariadb-devel  -y
-yum install gcc -y
-yum -y install python-devel libxslt-devel libffi-devel openssl-devel
-pip install -r requirements.txt
-nohub python app.py & 
+# OS      = CentOS7
+# CPU     = 1 CPU minimum
+# RAM     = 1 GB minimum
+# STORAGE = 20 GB minimum
 ```
 
-
-# Dockerize the application 
+# Clone Repo
 ```
-git clone git@gitlab.acirrustech.com:deployment/applicaiton_deployment.git
-cd applicaiton_deployment
-docker build acirrustech:acirrustech . 
-docker run -dti -p 80:5000 acirrustech:acirrustech
+git clone git@ec2-52-49-119-213.eu-west-1.compute.amazonaws.com:azaa1/application.git
+```
+
+# Install Necessary Packages
+```
+cd applicaiton
+sudo bash install-packages.sh
+yum clean all
+```
+
+# Install Application Dependencies
+```
+cd app
+sudo bash install-requirements.sh
+```
+
+# Run Application
+```
+python app.py
 ```
